@@ -1,0 +1,33 @@
+.navbar {
+    grid-area: n;
+    background-color: burlywood;
+    text-align: center;
+    text-decoration-color:white;
+    /*margin-right: 15px;*/
+
+}
+
+.titlesFromNavbar{
+    margin: 20px;
+    font-size: 20px;
+}
+.titlesFromNavbar a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.titlesFromNavbar a.active {
+    color: chocolate;
+}
+
+/*.nav{*/
+/*    grid-area: n;*/
+/*    background-color: burlywood;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*.nav a {*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*}*/

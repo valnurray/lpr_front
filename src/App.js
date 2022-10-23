@@ -1,12 +1,12 @@
 import './App.css';
 import CategoryComponent from "./Components/Category/CategoryComponent";
-import Header from "./Components/Header/Header";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
+import Header from "./Components/BasicPages/Header/Header";
+import Navbar from "./Components/BasicPages/Navbar/Navbar";
+import Footer from "./Components/BasicPages/Footer/Footer";
 import {Routes, Route, BrowserRouter} from "react-router-dom"
 import UserComponent from "./Components/User/UserComponent";
 import About from "./Components/AboutUs/About";
-import PageNotFound from "./Components/PageNotFound/PageNotFound";
+import PageNotFound from "./Components/BasicPages/PageNotFound/PageNotFound";
 
 
 function App() {
@@ -15,9 +15,6 @@ function App() {
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
-                {/*<div className="app-wrapper-content">*/}
-                {/*     <CategoryComponent />*/}
-                {/*</div>*/}
                 <Routes>
                     <Route path="/" element={<CategoryComponent/>}/>
                     <Route path="/users" element={<UserComponent/>}/>
