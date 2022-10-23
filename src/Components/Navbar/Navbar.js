@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./Navbar.module.css"
-import CategoryComponent from "../CategoryComponent";
 
 const Navbar = () => {
     return <nav className={classes.nav}>
