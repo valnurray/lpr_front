@@ -3,7 +3,7 @@ import style from "./HeaderRightComponent.module.css"
 
 const HeaderRightComponent = () => {
     return <div className={style.headerRight}>
-        <h3>title</h3>
+        <h4>User information</h4>
     </div>
 
 }

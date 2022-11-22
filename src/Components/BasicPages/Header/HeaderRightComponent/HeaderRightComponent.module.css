@@ -1,3 +1,6 @@
 .headerRight{
     grid-area: r;
+    text-align: center;
+    margin-top: 20%;
+    color: white;
 }
