@@ -21,6 +21,10 @@
     color: chocolate;
 }
 
+.active {
+    color: black;
+}
+
 /*.nav{*/
 /*    grid-area: n;*/
 /*    background-color: burlywood;*/

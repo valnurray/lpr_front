@@ -1,8 +1,14 @@
-.header{
+.header {
     grid-area: h;
     width: 100%;
-    /*background-color: greenyellow;*/
-    /*background-color: #415d97;*/
-    background-color: #e3810d;
+    background-color: #6760fa;
 
+}
+
+.headKeeper {
+    display: grid;
+    grid-template-areas:
+    "l c r";
+    grid-template-columns: 4fr 8fr 2fr;
+    grid-template-rows: 100px 1fr;
 }

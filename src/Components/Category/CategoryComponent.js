@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import CategoryService from "../../Services/CategoryService";
 
+
 function CategoryComponent () {
     const [category, setCategory] = useState([])
 

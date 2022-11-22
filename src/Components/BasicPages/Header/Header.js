@@ -1,13 +1,18 @@
 import React from "react";
-import classes from "./Header.module.css";
-import BgColor from "../BackgroundColorSwitcher/BgColor";
+import style from "./Header.module.css";
+
+import HeaderRightComponent from "./HeaderRightComponent/HeaderRightComponent";
+import HeaderCenterComponent from "./HeaderCenterComponent/HeaderCenterComponent";
+import HeaderLeftComponent from "./HeaderLeftComponent/HeaderLeftComponent";
 
 const Header = () => {
-    return <header className={classes.header}>
-        <BgColor />
-        <div className = "container">
-            <h1 className = "text-center"> HEADER </h1>
+    return <header className={style.header}>
+        <div className={style.headKeeper}>
+            <HeaderRightComponent/>
+            <HeaderCenterComponent/>
+            <HeaderLeftComponent/>
         </div>
+
     </header>
 }
 

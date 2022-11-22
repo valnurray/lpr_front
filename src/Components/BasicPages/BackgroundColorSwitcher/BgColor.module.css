@@ -1,6 +1,10 @@
 .stylesSelector{
-    width: 10%;
+    width: 30%;
     float: left;
     margin-top: 10px;
     background-color: #e3810d;
+    /*center*/
+    /*display: block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
 }
