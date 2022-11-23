@@ -1,6 +1,7 @@
 .headLeft {
     grid-area: l;
     margin: auto;
+    display: block;
     /*margin: 0;*/
     /*padding: 0;*/
     /*!*background: #19161c;*!*/

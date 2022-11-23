@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import CategoryService from "../../Services/CategoryService";
+import styles from "./CategoryComponent.module.css"
 
 
-function CategoryComponent () {
+function CategoryComponent() {
     const [category, setCategory] = useState([])
 
     useEffect(() => {
@@ -18,17 +19,14 @@ function CategoryComponent () {
     };
 
     return (
-        <div className="app-wrapper-content">
-            <div className = "container">
-
-                <h1 className = "text-center"> Category List</h1>
-
-                <table className = "table table-striped">
+        <div className={styles.categoryWraper}>
+            <div>
+                <table className={styles.container2}>
                     <thead>
                     <tr>
-                        <th> Category Id</th>
-                        <th> Category Title</th>
-                        <th> Category Description</th>
+                        <th><h1>Category Id</h1> </th>
+                        <th><h1>Category Title</h1> </th>
+                        <th><h1>Description</h1></th>
                     </tr>
 
                     </thead>
@@ -36,19 +34,19 @@ function CategoryComponent () {
                     {
                         category.map(
                             category =>
-                                <tr key = {category.categoryId}>
+                                <tr key={category.categoryId}>
                                     <td> {category.categoryId}</td>
-                                    <td> {category.title }</td>
-                                    <td> {category.description }</td>
+                                    <td> {category.title}</td>
+                                    <td> {category.description}</td>
                                 </tr>
                         )
                     }
 
                     </tbody>
                 </table>
-
             </div>
         </div>
+
 
     )
 }
