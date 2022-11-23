@@ -37,7 +37,7 @@ h2 a {
 .container2 th h1 {
     font-weight: bold;
     font-size: 1em;
-    text-align: left;
+    text-align: center;
     color: #185875;
 }
 
@@ -59,10 +59,13 @@ h2 a {
 }
 
 .container2 td, .container2 th {
-    padding-bottom: 2%;
-    padding-top: 2%;
-    padding-left:2%;
+    padding: 2%;
 }
+/*.container2 td, .container2 th {*/
+/*    padding-bottom: 2%;*/
+/*    padding-top: 2%;*/
+/*    padding-left:2%;*/
+/*}*/
 
 /* Background-color of the odd rows */
 .container2 tr:nth-child(odd) {
@@ -91,6 +94,7 @@ h2 a {
     background-color: #FFF842;
     color: #403E10;
     font-weight: bold;
+    padding: 2%;
 
     box-shadow: #7F7C21 -1px 1px, #7F7C21 0px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
     transform: translate3d(6px, -6px, 0);
