@@ -7,6 +7,8 @@ import {Routes, Route, BrowserRouter} from "react-router-dom"
 import UserComponent from "./Components/User/UserComponent";
 import About from "./Components/AboutUs/About";
 import PageNotFound from "./Components/BasicPages/PageNotFound/PageNotFound";
+import ProductComponent from "./Components/Product/ProductComponent";
+import ContentComponent from "./Components/Content/ContentComponent";
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
                 <Navbar/>
                 <Routes>
                     <Route path="/" element={<CategoryComponent/>}/>
+                    <Route path="/products" element={<ProductComponent/>}/>
+                    <Route path="/content" element={<ContentComponent/>}/>
                     <Route path="/users" element={<UserComponent/>}/>
                     <Route path="/about" element={<About/>}/>
                     <Route path="/*" element={<PageNotFound/>}/>

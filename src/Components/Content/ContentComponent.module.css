@@ -1,0 +1,31 @@
+.content {
+    color: white;
+    background-color: #1c2431;
+
+}
+.simpleContent {
+    background-color: #1c2431;
+    margin: 5%;
+}
+
+.videoResponsive {
+    border: solid 2px #FFF842;
+    margin-top: 5px;
+}
+.title {
+    padding: 2%;
+}
+.info {
+    padding: 0% 2% 2% 2%
+}
+
+.container {
+    border: 2px white;
+}
+.description {
+    width: 80%;
+    text-align: left;
+    padding-top: 2%;
+    margin: auto;
+}
+
