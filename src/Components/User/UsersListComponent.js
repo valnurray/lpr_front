@@ -57,7 +57,7 @@ function UsersListComponent() {
                     {
                         users.map(
                             user =>
-                                <tr  key={user.userId} onClick={() => viewUser(user.userId)}>
+                                <tr className={styles.rows}  key={user.userId} onClick={() => viewUser(user.userId)}>
                                     <td> {user.userId}</td>
                                     <td> {user.login}</td>
                                     <td> {user.credentials}</td>
