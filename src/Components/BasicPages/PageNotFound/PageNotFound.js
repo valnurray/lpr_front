@@ -1,14 +1,20 @@
 import React, {Component} from 'react'
 import {Link} from "react-router-dom";
+import styles from "./PageNotFound.module.css";
+import notfound from "../../../common/images/notfound/notfound.jpg"
+import style from "../Header/HeaderLeftComponent/HeaderLeftComponent.module.css";
+import logo from "../../../common/images/Logo/logo-cast.png";
+
 
 
 class PageNotFound extends Component {
     render() {
         return (
-            <div  data-testid="PageNotFound"
-                  className='container'>
-                <h1>404 - Not Found!</h1>
-                <Link to="/" className="btn btn-danger">HOME</Link>
+            <div className={styles.categoryWraper}>
+                <Link to="/">
+                    <img src={notfound} alt={notfound}/>
+                </Link>
+                {/*<Link to="/" className={styles.homebutton}>HOME</Link>*/}
             </div>
         );
     }

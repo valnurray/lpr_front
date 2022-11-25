@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import UserService from "../../Services/UserService";
 import { useNavigate } from 'react-router-dom';
 import {useParams} from "react-router-dom";
+import styles from './UserComponent.module.css'
 
 function ViewUserComponent(props) {
     const [user, setUser] = useState({
@@ -36,7 +37,7 @@ function ViewUserComponent(props) {
     }
 
     return (
-        <div data-testid="ViewArticleComponent"  className="container">
+        <div  className="container">
             <br></br>
             <div className="card col-md-6 offset-md-3">
                 <h3 className="text-center">View User Details</h3>
@@ -48,7 +49,7 @@ function ViewUserComponent(props) {
                         <label> User Login: {user.login}</label>
                     </div>
                     <div className = "row">
-                        <label> Article Credentials: {user.Credentials}</label>
+                        <label> User Credentials: {user.credentials}</label>
                     </div>
                     <div className="row">
                         <label> User email: {user.email}</label>
@@ -65,7 +66,8 @@ function ViewUserComponent(props) {
                     </div>
                 </div>
             </div>
-            <button className="btn btn-danger" onClick={cancel} style={{marginLeft: "10px"}}>HOME
+            {/*<button className="btn btn-danger" onClick={cancel} style={{margin: "10px"}}>HOME*/}
+            <button className={styles.homebutton} onClick={cancel}>HOME
             </button>
         </div>
     )
