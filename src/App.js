@@ -1,15 +1,15 @@
 import './App.css';
-import CategoryComponent from "./Components/Category/CategoryComponent";
+import CategoryComponent from "./Components/BuisnessComponents/Category/CategoryComponent";
 import Header from "./Components/BasicPages/Header/Header";
 import Navbar from "./Components/BasicPages/Navbar/Navbar";
 import Footer from "./Components/BasicPages/Footer/Footer";
 import {Routes, Route, BrowserRouter} from "react-router-dom"
-import UsersListComponent from "./Components/User/UsersListComponent";
+import UsersListComponent from "./Components/BuisnessComponents/User/UsersListComponent";
 import About from "./Components/AboutUs/About";
 import PageNotFound from "./Components/BasicPages/PageNotFound/PageNotFound";
-import ProductComponent from "./Components/Product/ProductComponent";
-import ContentComponent from "./Components/Content/ContentComponent";
-import ViewUserComponent from "./Components/User/ViewUserComponent";
+import ProductComponent from "./Components/BuisnessComponents/Product/ProductComponent";
+import ContentComponent from "./Components/BuisnessComponents/Content/ContentComponent";
+import ViewUserComponent from "./Components/BuisnessComponents/User/ViewUserComponent";
 
 
 function App() {

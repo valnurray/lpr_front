@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import ProductService from "../../Services/ProductService";
+import ProductService from "../../../Services/ProductService";
 import styles from "./ProductComponent.module.css";
 
 function ProductComponent() {

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import CategoryService from "../../Services/CategoryService";
+import CategoryService from "../../../Services/CategoryService";
 import styles from "./CategoryComponent.module.css"
 
 

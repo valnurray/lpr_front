@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom';
-import UserService from "../../Services/UserService";
-import RoleService from "../../Services/RoleService";
+import UserService from "../../../Services/UserService";
+import RoleService from "../../../Services/RoleService";
 import styles from "./UserComponent.module.css"
 
 function UsersListComponent() {
