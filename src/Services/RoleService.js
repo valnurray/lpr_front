@@ -7,8 +7,8 @@ class RoleService{
     getRoles(){
         return axios.get(ROLES_API_BASE_URL);
     }
-    getRoleById(roleId) {
-        return axios.get(ROLES_API_BASE_URL + '/' + roleId);
+    getRoleById(rolesId) {
+        return axios.get(ROLES_API_BASE_URL + '/' + rolesId);
     }
 }
 
