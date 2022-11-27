@@ -25,30 +25,16 @@ function ViewUserComponent() {
         }
     });
 
-    const [role, setRole] = useState({
-        roles: ''
-    });
 
     const navigate = useNavigate();
 
     const {id} = useParams();
-    const {roleid} = useParams();
 
 
     useEffect(() => {
         getUser()
     }, [])
 
-    useEffect( () => {
-        getRole()
-    }, [])
-
-    const getRole = () => {
-        RoleService.getRoleById(id).then((response) => {
-            setRole(response.data);
-        });
-
-    }
     const getUser = () => {
         UserService.getUserById(id).then((response) => {
             setUser(response.data);
@@ -84,7 +70,7 @@ function ViewUserComponent() {
                         <label> User birthday: {user.birthday ? null : 'not specified'}</label>
                     </div>
                     <div className="row">
-                        <label> User Role: {role.roles}</label>
+                        <label> User Role: {user.role.roles}</label>
                     </div>
                 </div>
             </div>
