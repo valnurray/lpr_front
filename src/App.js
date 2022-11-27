@@ -1,5 +1,5 @@
 import './App.css';
-import CategoryComponent from "./Components/BuisnessComponents/Category/CategoryComponent";
+import CategoryListComponent from "./Components/BuisnessComponents/Category/CategoryListComponent";
 import Header from "./Components/BasicPages/Header/Header";
 import Navbar from "./Components/BasicPages/Navbar/Navbar";
 import Footer from "./Components/BasicPages/Footer/Footer";
@@ -19,7 +19,7 @@ function App() {
                 <Header/>
                 <Navbar/>
                 <Routes>
-                    <Route path="/" element={<CategoryComponent/>}/>
+                    <Route path="/" element={<CategoryListComponent/>}/>
                     <Route path="/products" element={<ProductComponent/>}/>
                     <Route path="/content" element={<ContentComponent/>}/>
                     <Route path="/users" element={<UsersListComponent/>}/>

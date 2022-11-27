@@ -7,6 +7,10 @@ class CategoryService{
     getCategory(){
         return axios.get(CATEGORY_API_BASE_URL);
     }
+
+    getCategoryById(categoryId) {
+        return axios.get(CATEGORY_API_BASE_URL + "/" + categoryId)
+    }
 }
 
 export default new CategoryService();

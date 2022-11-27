@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import CategoryService from "../../../Services/CategoryService";
 import styles from "./CategoryComponent.module.css"
+import {useNavigate} from "react-router-dom";
 
 
-function CategoryComponent() {
+function CategoryListComponent() {
     const [category, setCategory] = useState([])
 
     useEffect(() => {
@@ -18,15 +19,22 @@ function CategoryComponent() {
         });
     };
 
+    const navigate = useNavigate();
+
+    const viewCategory = (id) => {
+        console.log(`${id}`)
+        navigate(`/category/${id}`);
+    }
+
     return (
         <div className={styles.categoryWraper}>
             <div>
                 <table className={styles.container2}>
                     <thead>
                     <tr>
-                        <th><h1>Category Id</h1> </th>
-                        <th><h1>Category Title</h1> </th>
-                        <th><h1>Description</h1></th>
+                        <th><h2 className={styles.naming}>Category Id</h2> </th>
+                        <th><h2 className={styles.naming}>Category Title</h2> </th>
+                        <th><h2 className={styles.naming}>Description</h2></th>
                     </tr>
 
                     </thead>
@@ -34,7 +42,7 @@ function CategoryComponent() {
                     {
                         category.map(
                             category =>
-                                <tr key={category.categoryId}>
+                                <tr className={styles.rows}  key={category.categoryId} onClick={() => viewCategory(category.categoryId)} >
                                     <td> {category.categoryId}</td>
                                     <td> {category.title}</td>
                                     <td> {category.description}</td>
@@ -51,4 +59,4 @@ function CategoryComponent() {
     )
 }
 
-export default CategoryComponent
+export default CategoryListComponent
