@@ -5,17 +5,24 @@ import {useParams} from "react-router-dom";
 import styles from './UserComponent.module.css'
 import RoleService from "../../../Services/RoleService";
 
-function ViewUserComponent(props) {
+function ViewUserComponent() {
     const [user, setUser] = useState({
         login: '',
         Credentials: '',
         email: '',
         gender: '',
         birthday: '',
-        role: ''
-        // role: {
-        //     roles: ''
-        // }
+        // role: ''
+        role: {
+            rolesId: '',
+            roles: ''
+        },
+        productMembers: {
+
+        },
+        orderFields: {
+
+        }
     });
 
     const [role, setRole] = useState({
