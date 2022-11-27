@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom';
 import UserService from "../../../Services/UserService";
-import RoleService from "../../../Services/RoleService";
 import styles from "./UserComponent.module.css"
 
 function UsersListComponent() {
@@ -16,13 +15,6 @@ function UsersListComponent() {
 
         UserService.getUsers().then((response) => {
             setUsers(response.data)
-            console.log(response.data);
-        });
-    };
-
-    const getRoleName = (roleId) => {
-        RoleService.getRoleById(roleId).then((response) => {
-            setUsers(response.data);
             console.log(response.data);
         });
     };
@@ -49,7 +41,7 @@ function UsersListComponent() {
                         <th><h2 className={styles.naming}>User Email</h2></th>
                         <th><h2 className={styles.naming}>User Gender</h2></th>
                         <th><h2 className={styles.naming}>User birthday</h2></th>
-                        {/*<th> User Role</th>*/}
+                        <th><h2 className={styles.naming}>User Role</h2> </th>
                     </tr>
 
                     </thead>
@@ -64,14 +56,7 @@ function UsersListComponent() {
                                     <td> {user.email}</td>
                                     <td> {user.gender}</td>
                                     <td> {user.birthday ? null : 'not specified'}</td>
-                                    {/*<td> {getRoleName(user.role)}</td>*/}
-                                    {/*<td> {user.rolesId}</td>*/}
-                                    {/*view*/}
-                                    {/*<button style={{marginLeft: "10px"}}*/}
-                                    {/*        onClick={() => viewUser(user.userId)*/}
-                                    {/*        }*/}
-                                    {/*        className="btn btn-info">View*/}
-                                    {/*</button>*/}
+                                    <td> {user.role.roles}</td>
                                 </tr>
                         )
                     }
