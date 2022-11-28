@@ -108,5 +108,17 @@
     cursor: not-allowed;
 }
 
+.productdiv {
+    border: solid #f4e603;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+
+}
+
+.productdiv :hover {
+    cursor: pointer;
+}
+
 
 

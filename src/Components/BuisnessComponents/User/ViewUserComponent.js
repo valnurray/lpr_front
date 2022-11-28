@@ -12,14 +12,20 @@ function ViewUserComponent() {
         email: '',
         gender: '',
         birthday: '',
-        // role: ''
         role: {
             rolesId: '',
             roles: ''
         },
-        productMembers: {
-
-        },
+        productMembers: [{
+            orderTime: '',
+            product: {
+                productId: '',
+                title: '',
+                visibility: '',
+                price: '',
+                info: ''
+            }
+        }],
         orderFields: {
 
         }
@@ -43,6 +49,10 @@ function ViewUserComponent() {
 
     const cancel = () => {
         navigate('/users');
+    }
+
+    const viewUser = (id) => {
+        navigate(`/products/${id}`);
     }
 
     return (
@@ -71,6 +81,16 @@ function ViewUserComponent() {
                     </div>
                     <div className="row">
                         <label> User Role: {user.role.roles}</label>
+                    </div>
+                    <div className="row">
+                        <label>Products : </label>
+                        {
+                            user.productMembers.map((item) =>
+                            <div className={styles.productdiv} key={item.productMembersId} onClick={() => viewUser(item.productId)}>
+                                <div className={styles.subrow}>{item.product.title}</div>
+                            </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>
