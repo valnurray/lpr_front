@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+.categoryWraper {
+    color: white;
+    background-color: #1c2431;
+}
+
+.naming {
+    font-size:1em;
+    text-align: center;
+    display: block;
+    color: #FB667A;
+    padding: 0%;
+}
+
+.container2 td {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+    cursor: pointer;
+}
+
+.container2 {
+    text-align: left;
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+
+}
+
+.container2 td, .container2 th {
+    padding: 1%;
+}
+
+/* Background-color of the odd rows */
+.container2 .rows tr:nth-child(odd) {
+    background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container2  tr:nth-child(even) {
+    background-color: #2C3446;
+}
+
+.container2 th {
+    background-color: #1F2739;
+}
+
+.container2 td:first-child { color: #FB667A; }
+
+.container2 .rows:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+    padding: 2%;
+    overflow-wrap: break-word;
+
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 0px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+.content {
+    color: white;
+    background-color: #1c2431;
+
+}
+.simpleContent {
+    background-color: #1c2431;
+    margin: 5%;
+}
+
+.videoResponsive {
+    border: solid 2px #FFF842;
+    margin-top: 5px;
+}
+.title {
+    padding: 2%;
+}
+.info {
+    padding: 0% 2% 2% 2%
+}
+
+.container {
+    border: 2px white;
+}
+.description {
+    width: 80%;
+    text-align: left;
+    padding-top: 2%;
+    margin: auto;
+}
+
+.homebutton {
+    background-color: #FFF842;
+    color: #403E10;
+}
+
+
+
+.homebutton {
+    background-color: #FFF842;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    width:10%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 2%;
+}
+
+.homebutton:not(:disabled):hover,
+.homebutton:not(:disabled):focus {
+    outline: 0;
+    background: #f4e603;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.homebutton:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+}

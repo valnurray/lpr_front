@@ -51,7 +51,8 @@ function ViewUserComponent() {
         navigate('/users');
     }
 
-    const viewUser = (id) => {
+    const viewProduct = (id) => {
+        console.log(`${id}`)
         navigate(`/products/${id}`);
     }
 
@@ -83,10 +84,10 @@ function ViewUserComponent() {
                         <label> User Role: {user.role.roles}</label>
                     </div>
                     <div className="row">
-                        <label>Products : </label>
+                        <label><h2 className={styles.naming}>Products</h2> </label>
                         {
                             user.productMembers.map((item) =>
-                            <div className={styles.productdiv} key={item.productMembersId} onClick={() => viewUser(item.productId)}>
+                            <div className={styles.productdiv} key={item.productMembersId} onClick={() => viewProduct(item.product.productId)}>
                                 <div className={styles.subrow}>{item.product.title}</div>
                             </div>
                             )
