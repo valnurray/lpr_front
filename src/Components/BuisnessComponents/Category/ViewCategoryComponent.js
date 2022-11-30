@@ -6,8 +6,15 @@ import CategoryService from "../../../Services/CategoryService";
 
 function ViewCategoryComponent() {
     const [category, setCategory] = useState({
+        title: '',
         description: '',
-        title: ''
+        products: [{
+            title: '',
+            visibility: '',
+            price: '',
+            info: '',
+            imgpath: ''
+        }]
     });
 
 
@@ -27,26 +34,38 @@ function ViewCategoryComponent() {
     }
 
     const cancel = () => {
-        navigate('/');
+        navigate('/category');
+    }
+
+    const viewProduct = (id) => {
+        console.log(`${id}`)
+        navigate(`/products/${id}`);
     }
 
     return (
-        <div className="container">
-            <br></br>
-            <div className="card col-md-6 offset-md-3">
-                <h3 className="text-center">View User Details</h3>
+        <div className={styles.categoryWraper}>
+                <h3 className="text-center">{category.title}</h3>
                 <div className="card-body">
+                        <h2 className={styles.naming}> About:  {category.description}</h2>
                     <div className="row">
-                        <label> Category ID: {category.userId}</label>
+                        {
+                            category.products.map(( item =>
+                            <div className={styles.productdiv} key={item.productId} onClick={() => viewProduct(item.productId)}>
+                                <div>{item.title}</div>
+                                <div>{item.price}</div>
+                                <div>{item.info}</div>
+                                <div>{item.imgpath}</div>
+                                <div>{item.visibility}</div>
+                            </div>
+                            ))
+                        }
+                    {/*    <label> Category Title: {category.}</label>*/}
                     </div>
-                    <div className="row">
-                        <label> Category Title: {category.login}</label>
-                    </div>
-                    <div className="row">
-                        <label> User Description: {category.credentials}</label>
-                    </div>
+                    {/*<div className="row">*/}
+                    {/*    <label> Category Description: {category.credentials}</label>*/}
+                    {/*</div>*/}
                 </div>
-            </div>
+
             <button className={styles.homebutton} onClick={cancel}>BACK
             </button>
         </div>

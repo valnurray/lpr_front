@@ -69,6 +69,19 @@
     transition-property: all;
 }
 
+.productdiv {
+    width: 80%;
+    border: solid #f4e603;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+
+}
+
+.productdiv :hover {
+    cursor: pointer;
+}
+
 
 
 /*@charset "UTF-8";*/
