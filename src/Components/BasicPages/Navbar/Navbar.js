@@ -1,19 +1,40 @@
 import React from "react";
 import classes from "./Navbar.module.css"
 import {NavLink} from "react-router-dom";
-import BgColor from "../BackgroundColorSwitcher/BgColor";
+import styles from "./Navbar.module.css"
+import users from "../../../common/icons/users.png"
+import about from "../../../common/icons/about.png"
+
+
 
 const Navbar = () => {
     return <nav className={classes.navbar}>
-        <div className = "container">
-            <div className={classes.navbar}>
-                <div  className={classes.titlesFromNavbar}>
-                    <NavLink to ="/users" >Users</NavLink>
+        <div>
+            <div className={styles.navsholder}>
+                <div className={styles.navbarblock}>
+                    <NavLink className={styles.navlink} to ="/users" >
+                        <img className={styles.icon} src={users} alt="icon"/>
+                        <h3 className={styles.naming}>Users</h3>
+                    </NavLink>
                 </div>
 
-                <div className={classes.titlesFromNavbar}>
-                    <NavLink to ="/about" >About</NavLink>
+                <div className={styles.navbarblock}>
+                    <NavLink className={styles.navlink} to ="/support" >
+                        <img className={styles.icon} src={users} alt="icon"/>
+                        <h3 className={styles.naming}>Users</h3>
+                    </NavLink>
                 </div>
+
+                <div className={styles.navbarblock}>
+                    <NavLink className={styles.navlink} to ="/about" >
+                        <img className={styles.icon} src={about} alt="icon"/>
+                        <h3 className={styles.naming}>About</h3>
+                    </NavLink>
+                </div>
+
+                {/*<div>*/}
+                {/*    <NavLink to ="/about" >About</NavLink>*/}
+                {/*</div>*/}
 
                 {/*<div className={classes.titlesFromNavbar}>*/}
                 {/*    <NavLink to ="/settings" >Settings</NavLink>*/}
