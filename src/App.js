@@ -15,6 +15,7 @@ import ViewProductComponent from "./Components/BuisnessComponents/Product/ViewPr
 import LoginPage from "./Components/BasicPages/LoginPage/LoginPage";
 import ViewCategoryComponent from "./Components/BuisnessComponents/Category/ViewCategoryComponent";
 import SettingsComponent from "./Components/BasicPages/Settings/SettingsComponent";
+import Support from "./Components/BasicPages/Support/SupportComponent";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
                         <Route path="/users" element={<UsersListComponent/>}/>
                         <Route path="/users/:id" element={<ViewUserComponent/>}/>
                         <Route path="/about" element={<About/>}/>
+                        <Route path="/support" element={<Support/>}/>
                         {/*<Route path="/settings" element={<SettingsComponent/>}/>*/}
                         <Route path="/*" element={<PageNotFound/>}/>
                     </Routes>

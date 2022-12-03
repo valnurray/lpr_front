@@ -1,0 +1,19 @@
+.aboutwraper {
+    color: white;
+    background-color: #1c2431;
+}
+
+.textp {
+    padding: 1%;
+}
+
+.title {
+    text-align: center;
+}
+.gif {
+    margin-left: 10%;
+}
+.image {
+    width: 80%;
+    margin-left: 10%;
+}
