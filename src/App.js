@@ -5,7 +5,7 @@ import Navbar from "./Components/BasicPages/Navbar/Navbar";
 import Footer from "./Components/BasicPages/Footer/Footer";
 import {Routes, Route, BrowserRouter} from "react-router-dom"
 import UsersListComponent from "./Components/BuisnessComponents/User/UsersListComponent";
-import About from "./Components/AboutUs/About";
+import About from "./Components/BasicPages/AboutUs/About";
 import PageNotFound from "./Components/BasicPages/PageNotFound/PageNotFound";
 import ProductListComponent from "./Components/BuisnessComponents/Product/ProductListComponent";
 import ContentComponent from "./Components/BuisnessComponents/Content/ContentComponent";
@@ -14,6 +14,7 @@ import styles from './App.css'
 import ViewProductComponent from "./Components/BuisnessComponents/Product/ViewProductComponent";
 import LoginPage from "./Components/BasicPages/LoginPage/LoginPage";
 import ViewCategoryComponent from "./Components/BuisnessComponents/Category/ViewCategoryComponent";
+import SettingsComponent from "./Components/BasicPages/Settings/SettingsComponent";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                         <Route path="/users" element={<UsersListComponent/>}/>
                         <Route path="/users/:id" element={<ViewUserComponent/>}/>
                         <Route path="/about" element={<About/>}/>
+                        <Route path="/settings" element={<SettingsComponent/>}/>
                         <Route path="/*" element={<PageNotFound/>}/>
                     </Routes>
                     <Footer/>

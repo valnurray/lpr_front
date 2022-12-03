@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./About.module.css"
+import gif from "../../../common/images/About/Galaxy.gif"
+import img from "../../../common/images/About/amazing.jpg"
 
 
 const About = () => {
     return <div className={styles.aboutwraper}>
-        <h2>ABOUT</h2>
+        <h2 className={styles.title}>ABOUT</h2>
         <div className="container">
             <p className={styles.textp}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -17,6 +19,7 @@ const About = () => {
                 Est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus.
                 Justo nec ultrices dui sapien. Mattis aliquam faucibus purus in massa. Ac tortor vitae purus faucibus ornare.
             </p>
+            <img className={styles.gif} src={gif} alt="galaxy"></img>
             <p className={styles.textp}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet.
@@ -39,6 +42,7 @@ const About = () => {
                 Est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus.
                 Justo nec ultrices dui sapien. Mattis aliquam faucibus purus in massa. Ac tortor vitae purus faucibus ornare.
             </p>
+            <img className={styles.image} src={img} alt="tree"></img>
             <p className={styles.textp}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet.

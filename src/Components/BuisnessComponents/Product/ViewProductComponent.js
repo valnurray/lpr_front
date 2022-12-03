@@ -35,7 +35,7 @@ function ViewProductComponent() {
     }
 
     const cancel = () => {
-        navigate('/products');
+        navigate('/category');
     }
 
     return (

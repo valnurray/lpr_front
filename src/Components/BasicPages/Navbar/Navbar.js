@@ -14,6 +14,10 @@ const Navbar = () => {
                     <NavLink to ="/about" >About</NavLink>
                 </div>
 
+                <div className={classes.titlesFromNavbar}>
+                    <NavLink to ="/settings" >Settings</NavLink>
+                </div>
+
                 {/*<div className= "container">*/}
                 {/*    <h3 className = "text-center"> Title3 </h3>*/}
                 {/*</div>*/}
