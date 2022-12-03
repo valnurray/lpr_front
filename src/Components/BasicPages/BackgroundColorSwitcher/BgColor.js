@@ -12,7 +12,9 @@ function BgColor() {
         {
             value: 2,
             label: "night",
-            color: "burlywood"
+            // color: "#1c2431"
+            color: "#283142"
+
 
         }];
     const [setBgColor, ddlValue] = useState(colors.label);

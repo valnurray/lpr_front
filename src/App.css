@@ -1,14 +1,15 @@
 .app-wrapper{
   margin: 0 auto;
   display: grid;
-  width: 1200px;
+  width: 100%;
+  min-height: 1200px;
   grid-template-areas:
   "h h h"
   "n c e"
   "f f f";
 
   grid-template-rows: 100px 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 2fr 16fr;
   /* grid-gap: 10px; */
 }
 

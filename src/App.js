@@ -34,7 +34,7 @@ function App() {
                         <Route path="/users" element={<UsersListComponent/>}/>
                         <Route path="/users/:id" element={<ViewUserComponent/>}/>
                         <Route path="/about" element={<About/>}/>
-                        <Route path="/settings" element={<SettingsComponent/>}/>
+                        {/*<Route path="/settings" element={<SettingsComponent/>}/>*/}
                         <Route path="/*" element={<PageNotFound/>}/>
                     </Routes>
                     <Footer/>

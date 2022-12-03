@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Navbar.module.css"
 import {NavLink} from "react-router-dom";
+import BgColor from "../BackgroundColorSwitcher/BgColor";
 
 const Navbar = () => {
     return <nav className={classes.navbar}>
@@ -14,9 +15,12 @@ const Navbar = () => {
                     <NavLink to ="/about" >About</NavLink>
                 </div>
 
-                <div className={classes.titlesFromNavbar}>
-                    <NavLink to ="/settings" >Settings</NavLink>
-                </div>
+                {/*<div className={classes.titlesFromNavbar}>*/}
+                {/*    <NavLink to ="/settings" >Settings</NavLink>*/}
+                {/*</div>*/}
+                {/*<div className={classes.titlesFromNavbar}>*/}
+                {/*    <BgColor/>*/}
+                {/*</div>*/}
 
                 {/*<div className= "container">*/}
                 {/*    <h3 className = "text-center"> Title3 </h3>*/}
