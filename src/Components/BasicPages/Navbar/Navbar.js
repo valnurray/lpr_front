@@ -10,7 +10,8 @@ import category from "../../../common/icons/category.png"
 
 
 const Navbar = () => {
-    return <nav className={classes.navbar}>
+        return <nav className={classes.navbar}>
+
         <NavLink className={styles.navlink} to="/category">
             <div className={styles.imageholder}>
                 <img src={category} alt="icon"/>

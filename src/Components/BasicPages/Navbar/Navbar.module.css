@@ -13,6 +13,13 @@
     margin-top: 5%;
 }
 
+
+.navlink .active{
+    color: #f4e603;
+    font-size: x-large;
+    margin: 20px;
+}
+
 .naming {
     font-size:0.8em;
     color: white;
