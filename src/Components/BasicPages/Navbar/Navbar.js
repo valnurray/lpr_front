@@ -15,7 +15,6 @@ const Navbar = () => {
             <div className={styles.imageholder}>
                 <img src={category} alt="icon"/>
             </div>
-            {/*<NavLink to="/category" activeClassName={styles.activelink}>CATEGORIES</NavLink>*/}
             <NavLink to="/category" className = { navData => navData.isActive ? styles.active : styles.navlinkholder }>CATEGORIES</NavLink>
         </div>
 
@@ -47,50 +46,6 @@ const Navbar = () => {
             <NavLink to="/about" className = { navData => navData.isActive ? styles.active : styles.navlinkholder }>ABOUT</NavLink>
         </div>
 
-        {/*<NavLink className={styles.navlink} to="/category">*/}
-        {/*    <div className={styles.imageholder}>*/}
-        {/*        <img src={category} alt="icon"/>*/}
-        {/*    </div>*/}
-        {/*    <div className={styles.titleholder} >*/}
-        {/*        <span className={styles.naming} >CATEGORIES</span>*/}
-        {/*    </div>*/}
-        {/*</NavLink>*/}
-
-        {/*<NavLink className={styles.navlink} to="/products">*/}
-        {/*    <div className={styles.imageholder}>*/}
-        {/*        <img src={products} alt="icon"/>*/}
-        {/*    </div>*/}
-        {/*    <div className={styles.titleholder}>*/}
-        {/*        <span className={styles.naming}>PRODUCTS</span>*/}
-        {/*    </div>*/}
-        {/*</NavLink>*/}
-
-        {/*<NavLink className={styles.navlink} to="/users">*/}
-        {/*        <div className={styles.imageholder}>*/}
-        {/*            <img  src={users} alt="icon"/>*/}
-        {/*        </div>*/}
-        {/*        <div className={styles.titleholder}>*/}
-        {/*            <span className={styles.naming}>USERS</span>*/}
-        {/*        </div>*/}
-        {/*</NavLink>*/}
-
-        {/*<NavLink className={styles.navlink} to="/support">*/}
-        {/*        <div className={styles.imageholder}>*/}
-        {/*            <img src={support} alt="icon"/>*/}
-        {/*        </div>*/}
-        {/*        <div className={styles.titleholder}>*/}
-        {/*            <span className={styles.naming}>SUPPORT</span>*/}
-        {/*        </div>*/}
-        {/*</NavLink>*/}
-
-        {/*<NavLink className={styles.navlink} to="/about">*/}
-        {/*        <div className={styles.imageholder}>*/}
-        {/*            <img src={about} alt="icon"/>*/}
-        {/*        </div>*/}
-        {/*        <div className={styles.titleholder}>*/}
-        {/*            <span className={styles.naming}>ABOUT</span>*/}
-        {/*        </div>*/}
-        {/*</NavLink>*/}
     </nav>
 }
 
