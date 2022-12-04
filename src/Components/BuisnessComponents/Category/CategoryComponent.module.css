@@ -13,7 +13,82 @@
     color: #FB667A;
     padding: 0%;
 }
+.title {
+    font-size:2.5em;
+    text-align: center;
+    display: block;
+    color: #FB667A;
+    margin-top: 2%;
+}
+.producttitle {
+    grid-area: t;
+    font-size:1.5em;
+    text-align: center;
+    display: block;
+    color: #FB667A;
+    margin-top: 1%;
+}
+.textp {
+    padding: 1%;
+}
+.pholder {
+    display: block;
+    margin: 2%;
+}
+.description {
+    font-size:1.5em;
+    text-align: center;
+    display: block;
+    color: white;
+    margin-top: 1%;
+}
+.productholder {
+    margin-top: 3%;
+}
+.producttext {
+    grid-area: c;
+    padding-left: 2%;
+}
+.price {
+    grid-area: p;
+    color: #f4e603;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+.info {
+    grid-area: i;
+    padding: 2%;
+    color: darkkhaki;
+}
 
+
+.productdiv {
+
+
+    background-color: #323C50;
+    margin: 2%;
+    /*width: 80%;*/
+    border: solid #f4e603;
+    /*margin: auto;*/
+    /*margin-bottom: 2%;*/
+    /*text-align: center;*/
+}
+.allin {
+    display: grid;
+    grid-template-areas:
+        "t p"
+        "i i"
+        "g g"
+        "c c";
+    grid-template-rows: 50px 2fr;
+    grid-template-columns: 20fr 2fr;
+}
+
+.productdiv :hover {
+    cursor: pointer;
+}
 .container2 td {
     text-align: center;
     font-weight: normal;
@@ -69,18 +144,6 @@
     transition-property: all;
 }
 
-.productdiv {
-    width: 80%;
-    border: solid #f4e603;
-    margin: auto;
-    margin-bottom: 2%;
-    text-align: center;
-
-}
-
-.productdiv :hover {
-    cursor: pointer;
-}
 .homebutton {
     background-color: #FFF842;
     color: #403E10;
