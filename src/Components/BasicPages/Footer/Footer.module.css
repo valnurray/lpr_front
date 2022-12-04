@@ -1,8 +1,22 @@
-.footer{
+.footer {
     grid-area: f;
-    /*background-color: greenyellow;*/
-    /*background-color: #415d97;*/
     background-color: #283142;
     color: white;
+}
 
+.footerholder {
+    display: grid;
+    grid-template-areas:
+     "l c r";
+
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 2fr 6fr 2fr;
+}
+.copy {
+    grid-area: c;
+    padding-top: 2%;
+}
+.footerlogo {
+    grid-area: r;
+    padding-top: 2%;
 }
