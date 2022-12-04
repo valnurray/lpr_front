@@ -8,77 +8,89 @@ import support from "../../../common/icons/support.png"
 import products from "../../../common/icons/products.png"
 import category from "../../../common/icons/category.png"
 
-
 const Navbar = () => {
-        return <nav className={classes.navbar}>
+    return <nav className={classes.navbar}>
 
-        <NavLink className={styles.navlink} to="/category">
+        <div className={styles.navlinkholder}>
             <div className={styles.imageholder}>
                 <img src={category} alt="icon"/>
             </div>
-            <div className={styles.titleholder} >
-                <span className={styles.naming} >CATEGORIES</span>
-            </div>
-        </NavLink>
+            {/*<NavLink to="/category" activeClassName={styles.activelink}>CATEGORIES</NavLink>*/}
+            <NavLink to="/category" className = { navData => navData.isActive ? styles.active : styles.navlinkholder }>CATEGORIES</NavLink>
+        </div>
 
-        <NavLink className={styles.navlink} to="/products">
+        <div className={styles.navlinkholder}>
             <div className={styles.imageholder}>
                 <img src={products} alt="icon"/>
             </div>
-            <div className={styles.titleholder}>
-                <span className={styles.naming}>PRODUCTS</span>
+            <NavLink to="/products">PRODUCTS</NavLink>
+        </div>
+
+        <div className={styles.navlinkholder}>
+            <div className={styles.imageholder}>
+                <img src={users} alt="icon"/>
             </div>
-        </NavLink>
+            <NavLink to="/users">USERS</NavLink>
+        </div>
 
-        <NavLink className={styles.navlink} to="/users">
-                <div className={styles.imageholder}>
-                    <img  src={users} alt="icon"/>
-                </div>
-                <div className={styles.titleholder}>
-                    <span className={styles.naming}>USERS</span>
-                </div>
-        </NavLink>
+        <div className={styles.navlinkholder}>
+            <div className={styles.imageholder}>
+                <img src={support} alt="icon"/>
+            </div>
+            <NavLink to="/support">SUPPORT</NavLink>
+        </div>
 
-        <NavLink className={styles.navlink} to="/support">
-                <div className={styles.imageholder}>
-                    <img src={support} alt="icon"/>
-                </div>
-                <div className={styles.titleholder}>
-                    <span className={styles.naming}>SUPPORT</span>
-                </div>
-        </NavLink>
-        <NavLink className={styles.navlink} to="/about">
-                <div className={styles.imageholder}>
-                    <img src={about} alt="icon"/>
-                </div>
-                <div className={styles.titleholder}>
-                    <span className={styles.naming}>ABOUT</span>
-                </div>
-        </NavLink>
-        {/*<div>*/}
-        {/*    <div className={styles.navsholder}>*/}
-        {/*        <div className={styles.navbarblock}>*/}
-        {/*            <NavLink className={styles.navlink} to ="/users" >*/}
-        {/*                <img className={styles.icon} src={users} alt="icon"/>*/}
-        {/*                <h3 className={styles.naming}>Users</h3>*/}
-        {/*            </NavLink>*/}
-        {/*        </div>*/}
+        <div className={styles.navlinkholder}>
+            <div className={styles.imageholder}>
+                <img src={about} alt="icon"/>
+            </div>
+            <NavLink to="/about">ABOUT</NavLink>
+        </div>
 
-        {/*        <div className={styles.navbarblock}>*/}
-        {/*            <NavLink className={styles.navlink} to ="/support" >*/}
-        {/*                <img className={styles.icon} src={support} alt="icon"/>*/}
-        {/*                <h3 className={styles.naming}>Support</h3>*/}
-        {/*            </NavLink>*/}
-        {/*        </div>*/}
-
-        {/*        <div className={styles.navbarblock}>*/}
-        {/*            <NavLink className={styles.navlink} to ="/about" >*/}
-        {/*                <img className={styles.icon} src={about} alt="icon"/>*/}
-        {/*                <h3 className={styles.naming}>About</h3>*/}
-        {/*            </NavLink>*/}
-        {/*        </div>*/}
+        {/*<NavLink className={styles.navlink} to="/category">*/}
+        {/*    <div className={styles.imageholder}>*/}
+        {/*        <img src={category} alt="icon"/>*/}
         {/*    </div>*/}
-        {/*</div>*/}
+        {/*    <div className={styles.titleholder} >*/}
+        {/*        <span className={styles.naming} >CATEGORIES</span>*/}
+        {/*    </div>*/}
+        {/*</NavLink>*/}
+
+        {/*<NavLink className={styles.navlink} to="/products">*/}
+        {/*    <div className={styles.imageholder}>*/}
+        {/*        <img src={products} alt="icon"/>*/}
+        {/*    </div>*/}
+        {/*    <div className={styles.titleholder}>*/}
+        {/*        <span className={styles.naming}>PRODUCTS</span>*/}
+        {/*    </div>*/}
+        {/*</NavLink>*/}
+
+        {/*<NavLink className={styles.navlink} to="/users">*/}
+        {/*        <div className={styles.imageholder}>*/}
+        {/*            <img  src={users} alt="icon"/>*/}
+        {/*        </div>*/}
+        {/*        <div className={styles.titleholder}>*/}
+        {/*            <span className={styles.naming}>USERS</span>*/}
+        {/*        </div>*/}
+        {/*</NavLink>*/}
+
+        {/*<NavLink className={styles.navlink} to="/support">*/}
+        {/*        <div className={styles.imageholder}>*/}
+        {/*            <img src={support} alt="icon"/>*/}
+        {/*        </div>*/}
+        {/*        <div className={styles.titleholder}>*/}
+        {/*            <span className={styles.naming}>SUPPORT</span>*/}
+        {/*        </div>*/}
+        {/*</NavLink>*/}
+
+        {/*<NavLink className={styles.navlink} to="/about">*/}
+        {/*        <div className={styles.imageholder}>*/}
+        {/*            <img src={about} alt="icon"/>*/}
+        {/*        </div>*/}
+        {/*        <div className={styles.titleholder}>*/}
+        {/*            <span className={styles.naming}>ABOUT</span>*/}
+        {/*        </div>*/}
+        {/*</NavLink>*/}
     </nav>
 }
 

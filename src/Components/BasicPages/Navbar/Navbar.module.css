@@ -3,40 +3,32 @@
     background-color: #283142;
 }
 
-.navlink {
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: grid;
-    grid-template-areas:
-    "l r";
-    grid-template-columns: 10fr 20fr;
-    margin-top: 5%;
-}
-
-
-.navlink .active{
-    color: #f4e603;
-    font-size: x-large;
-    margin: 20px;
-}
-
-.naming {
-    font-size:0.8em;
-    color: white;
-    font-family: fantasy;
-    letter-spacing: 0.2rem;
-}
-
-.navlinkinner {
-    display: inline-flex;
-}
 .imageholder{
     grid-area: l;
     margin: auto;
 }
-.titleholder{
-    grid-area: r;
+
+.navlinkholder{
+        display: grid;
+        grid-template-areas:
+        "l r";
+        grid-template-columns: 10fr 20fr;
+
 }
+
+.navlinkholder a {
+    text-decoration: none;
+    font-size:0.8em;
+    color: white;
+    font-family: fantasy;
+    letter-spacing: 0.2rem;
+    margin-top: 5%;
+}
+
+.navlinkholder a.active {
+    color: gold;
+}
+
 
 
 

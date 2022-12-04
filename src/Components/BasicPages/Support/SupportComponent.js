@@ -4,7 +4,7 @@ import styles from "./Support.module.css";
 
 const Support = () => {
     return <div className={styles.aboutwraper}>
-        <h2 className={styles.title}>ABOUT</h2>
+        <h2 className={styles.title}>SUPPORT</h2>
         <div className="container">
             <p className={styles.textp}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
