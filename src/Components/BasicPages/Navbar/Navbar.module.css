@@ -25,8 +25,12 @@
     margin-top: 5%;
 }
 
+.navlinkholder a:hover {
+    color: #FB667A;
+}
+
 .navlinkholder a.active {
-    color: gold;
+    color: #FB667A;
 }
 
 

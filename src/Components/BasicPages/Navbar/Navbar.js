@@ -23,28 +23,28 @@ const Navbar = () => {
             <div className={styles.imageholder}>
                 <img src={products} alt="icon"/>
             </div>
-            <NavLink to="/products">PRODUCTS</NavLink>
+            <NavLink to="/products" className = { navData => navData.isActive ? styles.active : styles.navlinkholder }>PRODUCTS</NavLink>
         </div>
 
         <div className={styles.navlinkholder}>
             <div className={styles.imageholder}>
                 <img src={users} alt="icon"/>
             </div>
-            <NavLink to="/users">USERS</NavLink>
+            <NavLink to="/users" className = { navData => navData.isActive ? styles.active : styles.navlinkholder }>USERS</NavLink>
         </div>
 
         <div className={styles.navlinkholder}>
             <div className={styles.imageholder}>
                 <img src={support} alt="icon"/>
             </div>
-            <NavLink to="/support">SUPPORT</NavLink>
+            <NavLink to="/support" className = { navData => navData.isActive ? styles.active : styles.navlinkholder }>SUPPORT</NavLink>
         </div>
 
         <div className={styles.navlinkholder}>
             <div className={styles.imageholder}>
                 <img src={about} alt="icon"/>
             </div>
-            <NavLink to="/about">ABOUT</NavLink>
+            <NavLink to="/about" className = { navData => navData.isActive ? styles.active : styles.navlinkholder }>ABOUT</NavLink>
         </div>
 
         {/*<NavLink className={styles.navlink} to="/category">*/}
