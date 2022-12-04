@@ -3,22 +3,23 @@
     background-color: #283142;
 }
 
-.imageholder{
+.imageholder {
     grid-area: l;
     margin: auto;
 }
 
-.navlinkholder{
-        display: grid;
-        grid-template-areas:
+.navlinkholder {
+    display: grid;
+    grid-template-areas:
         "l r";
-        grid-template-columns: 10fr 20fr;
+    grid-template-columns: 10fr 20fr;
+    margin-top: 3%;
 
 }
 
 .navlinkholder a {
     text-decoration: none;
-    font-size:0.8em;
+    font-size: 0.8em;
     color: white;
     font-family: fantasy;
     letter-spacing: 0.2rem;
@@ -26,11 +27,12 @@
 }
 
 .navlinkholder a:hover {
-    color: #FB667A;
+    color: white;
 }
 
 .navlinkholder a.active {
     color: #FB667A;
+    margin-left: 10%;
 }
 
 
