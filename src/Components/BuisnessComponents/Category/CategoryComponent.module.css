@@ -65,29 +65,55 @@
 
 
 .productdiv {
-
-
     background-color: #323C50;
     margin: 2%;
-    /*width: 80%;*/
     border: solid #f4e603;
-    /*margin: auto;*/
-    /*margin-bottom: 2%;*/
-    /*text-align: center;*/
 }
 .allin {
     display: grid;
     grid-template-areas:
-        "t p"
-        "i i"
-        "g g"
-        "c c";
-    grid-template-rows: 50px 2fr;
-    grid-template-columns: 20fr 2fr;
+        "b t p"
+        "i i i"
+        "g g g"
+        "c c c";
+    grid-template-rows: 75px 2fr;
+    grid-template-columns: 2fr 20fr 2fr;
 }
 
 .productdiv :hover {
     cursor: pointer;
+}
+
+.buybutton {
+    grid-area: b;
+    width: 75%;
+    background-color: #FFF842;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: auto;
+}
+.buybutton:not(:disabled):hover,
+.buybutton:not(:disabled):focus {
+    outline: 0;
+    background: #f4e603;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.buybutton:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
 }
 .container2 td {
     text-align: center;

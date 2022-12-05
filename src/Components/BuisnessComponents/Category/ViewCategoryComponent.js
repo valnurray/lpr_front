@@ -42,6 +42,11 @@ function ViewCategoryComponent() {
         navigate(`/products/${id}`);
     }
 
+    const viewBascet = (id) => {
+        console.log(`${id}`)
+        navigate(`/bascet/${id}`);
+    }
+
     return (
         <div className={styles.categoryWraper}>
             <h2 className={styles.title}>{category.title}</h2>
@@ -102,6 +107,8 @@ function ViewCategoryComponent() {
                              onClick={() => viewProduct(product.productId)}>
                             <div className={styles.allin}>
                                 <div className={styles.producttitle}>{product.title}</div>
+                                <button className={styles.buybutton} onClick={() => viewBascet(product.productId)}>BUY
+                                </button>
                                 <div className={styles.price}>{product.price} $</div>
                                 <div className={styles.info}>{product.info}</div>
                                 <p className={styles.producttext}>

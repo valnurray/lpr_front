@@ -45,7 +45,8 @@ function ProductListComponent() {
                     {
                         products.map(
                             product =>
-                                <tr className={styles.rows} key={product.productId} onClick={() => viewProduct(product.productId)}>
+                                <tr className={styles.rows} key={product.productId}
+                                    onClick={() => viewProduct(product.productId)}>
                                     <td> {product.productId}</td>
                                     <td> {product.title}</td>
                                     <td> {product.price}</td>
@@ -55,13 +56,10 @@ function ProductListComponent() {
                     }
 
                     </tbody>
-
-
                 </table>
-
             </div>
         </div>
-
     )
 }
+
 export default ProductListComponent

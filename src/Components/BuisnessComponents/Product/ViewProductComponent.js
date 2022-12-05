@@ -33,6 +33,10 @@ function ViewProductComponent() {
             setProduct(response.data);
         });
     }
+    const viewBascet = (id) => {
+        console.log(`${id}`)
+        navigate(`/bascet/${id}`);
+    }
 
     const cancel = () => {
         navigate('/category');
@@ -40,17 +44,29 @@ function ViewProductComponent() {
 
     return (
         <div className={styles.content}>
-                <h2 className={styles.naming}>{product.title}</h2>
-            <div className={styles.description}>
-                {product.price} $
+            <div className={styles.productholder}>
+                <div className={styles.producttitle}>
+                    {product.title}
+                </div>
+                <div className={styles.productinfo}>
+                    {product.info}
+                </div>
+                <div className={styles.productprice}>
+                    {product.price} $
+                </div>
+                <button className={styles.buybutton} onClick={() => viewBascet(product.productId)}>BUY
+                </button>
             </div>
-            <div className={styles.description}>
-                {product.info}
+
+            <div className={styles.productdescription}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
-            {/*<div>*/}
-            {/*    <img src={ing} />*/}
-            {/*</div>*/}
-            <div className={styles.description}>
+            <div className={styles.productdescription}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -64,8 +80,8 @@ function ViewProductComponent() {
                     product.contents.map(
                         content =>
                             <div className={styles.videoResponsive} key={content.contentId}>
-                                <h2 className={styles.title}> {content.title}</h2>
-                                <div className={styles.info}> {content.info}</div>
+                                <div className={styles.contenttitle}> {content.title}</div>
+                                <div className={styles.contentinfo}> {content.info}</div>
                                 <div className="ratio ratio-16x9">
                                     <iframe
                                         width="100%"
@@ -86,4 +102,5 @@ function ViewProductComponent() {
         </div>
     )
 }
+
 export default ViewProductComponent

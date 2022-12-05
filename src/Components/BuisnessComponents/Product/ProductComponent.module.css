@@ -73,31 +73,6 @@
     background-color: #1c2431;
 
 }
-.simpleContent {
-    background-color: #1c2431;
-    margin: 5%;
-}
-
-.videoResponsive {
-    border: solid 2px #FFF842;
-    margin-top: 5px;
-}
-.title {
-    padding: 2%;
-}
-.info {
-    padding: 0% 2% 2% 2%
-}
-
-.container {
-    border: 2px white;
-}
-.description {
-    width: 80%;
-    text-align: left;
-    padding-top: 2%;
-    margin: auto;
-}
 
 .homebutton {
     background-color: #FFF842;
@@ -133,6 +108,100 @@
 }
 
 .homebutton:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+}
+
+.productholder {
+    display: grid;
+    grid-template-areas:
+        "t t t"
+        "i p b"
+        "d d d"
+        "l l l";
+    grid-template-rows: 100px 2fr;
+    grid-template-columns: 30fr 3fr 3fr;
+}
+.producttitle {
+    grid-area: t;
+    font-size:2.5em;
+    text-align: center;
+    display: block;
+    color: #FB667A;
+    margin-top: 1%;
+}
+.productinfo {
+    grid-area: i;
+    padding-left: 5%;
+    color: darkkhaki;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.productprice {
+    grid-area: p;
+    color: #f4e603;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+.productdescription {
+    grid-area: l;
+    padding: 1% 4%;
+}
+
+.simpleContent {
+    grid-area: l;
+    margin: 4%;
+}
+
+.videoResponsive {
+    border: solid #f4e603;
+    margin-top: 5px;
+    background-color: #323C50;
+}
+.contenttitle {
+    font-size:2em;
+    text-align: center;
+    display: block;
+    color: #FB667A;
+    margin-top: 1%;
+}
+
+.contentinfo {
+    padding: 2% 2% 2%;
+    color: darkkhaki;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.buybutton {
+    width: 75%;
+    background-color: #FFF842;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 2%;
+}
+.buybutton:not(:disabled):hover,
+.buybutton:not(:disabled):focus {
+    outline: 0;
+    background: #f4e603;
+    box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.buybutton:disabled {
     filter: saturate(0.2) opacity(0.5);
     -webkit-filter: saturate(0.2) opacity(0.5);
     cursor: not-allowed;

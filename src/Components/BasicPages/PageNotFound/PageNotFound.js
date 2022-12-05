@@ -12,7 +12,7 @@ class PageNotFound extends Component {
         return (
             <div className={styles.categoryWraper}>
                 <Link to="/">
-                    <img src={notfound} alt={notfound}/>
+                    <img className={styles.pagenotfoundimg} src={notfound} alt={notfound}/>
                 </Link>
                 {/*<Link to="/" className={styles.homebutton}>HOME</Link>*/}
             </div>
