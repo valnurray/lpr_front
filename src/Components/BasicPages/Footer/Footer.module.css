@@ -10,13 +10,14 @@
      "l c r";
 
     grid-template-rows: 100px 1fr;
-    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-columns: 1fr 6fr 2fr;
 }
 .copy {
     grid-area: c;
     padding-top: 2%;
+    padding-left: 2%;
 }
 .footerlogo {
     grid-area: r;
-    padding-top: 2%;
+    margin: auto;
 }
