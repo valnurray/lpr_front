@@ -24,13 +24,17 @@ function UsersListComponent() {
     const viewUser = (id) => {
         navigate(`/users/${id}`);
     }
+    const addUser = () => {
+        navigate('/add-user/_add');
+    }
 
     return (
         <div className={styles.categoryWraper}>
             <div className={styles.container2}>
                 {/*<div className="container">*/}
+                    <span className={styles.h1holder}>User List</span>
 
-                <h1 > User List</h1>
+                    <button className={styles.addbutton} onClick={addUser}> Add User</button>
 
                 <table className={styles.container2}>
                     <thead>

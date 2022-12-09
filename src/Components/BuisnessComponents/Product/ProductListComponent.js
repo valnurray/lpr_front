@@ -28,7 +28,7 @@ function ProductListComponent() {
         <div className={styles.categoryWraper}>
             <div>
 
-                <h2> Products </h2>
+                <h1 className = "text-center"> Products </h1>
 
                 <table className={styles.container2}>
                     <thead>
