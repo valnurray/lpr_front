@@ -7,14 +7,14 @@ function UserCreateComponent() {
 
     const [user, setUser] = useState({
         login: '',
-        Credentials: '',
+        credentials: '',
         email: '',
         gender: '',
         birthday: '',
         role: {
-            rolesId: '',
-            roles: ''
-        }
+            rolesId: '2',
+            roles: 'User'
+        },
     });
 
     const navigate = useNavigate();
@@ -34,7 +34,7 @@ function UserCreateComponent() {
         debugger
         const data = {
             login: user.login,
-            Credentials: user.Credentials,
+            credentials: user.credentials,
             email: user.email,
             gender: user.gender,
             birthday: user.birthday,
@@ -92,16 +92,53 @@ function UserCreateComponent() {
                                 <label>Credentials</label>
                                 <input
                                     className="form-control"
-                                    {...register("Credentials", {
-                                        required: true,
-                                        pattern: /^[A-Za-z]+$/i})}
+                                    {...register("credentials", {
+                                        required: true})}
                                     onChange={oneChangeHandler}
                                 />
-                                {errors?.Credentials?.type === "required" &&
+                                {errors?.credentials?.type === "required" &&
                                 <p style={{color: "red"}}>Credentials can not be empty</p>}
-                                {errors?.Credentials?.type === "pattern" && (
-                                    <p style={{color: "red"}}>Alphabetical characters only</p>
-                                )}
+
+                                <label>Email</label>
+                                <input
+                                    className="form-control"
+                                    {...register("email", {
+                                        required: true
+                                        })}
+                                    onChange={oneChangeHandler}
+                                />
+                                {errors?.email?.type === "required" &&
+                                <p style={{color: "red"}}>Email can not be empty</p>}
+
+                                <label>Gender</label>
+                                <input
+                                    className="form-control"
+                                    {...register("gender", {
+                                        required: true
+                                    })}
+                                    onChange={oneChangeHandler}
+                                />
+                                {errors?.gender?.type === "required" &&
+                                <p style={{color: "red"}}>Gender can not be empty</p>}
+
+                                <label>Birthday</label>
+                                <input
+                                    className="form-control"
+                                    {...register("birthday", {
+                                    })}
+                                    onChange={oneChangeHandler}
+                                />
+
+                                <label>rolesId</label>
+                                <input
+                                    className="form-control"
+                                    {...register("rolesId", {
+                                        required: true
+                                    })}
+                                    onChange={oneChangeHandler}
+                                />
+                                {errors?.rolesId?.type === "required" &&
+                                <p style={{color: "red"}}>rolesId can not be empty</p>}
 
 
                                 <button type="submit" className="btn btn-success">Save</button>
