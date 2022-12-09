@@ -51,10 +51,6 @@ function ViewUserComponent() {
         navigate(`/update-user/${id}`);
     }
 
-    const addUser = () => {
-        navigate('/add-user/_add');
-    }
-
     const cancel = () => {
         navigate('/users');
     }
@@ -69,9 +65,14 @@ function ViewUserComponent() {
             <br></br>
             <div className="card col-md-6 offset-md-3">
                 <h3 className="text-center">View User Details</h3>
-                <div className="row">
-                    <button className="btn btn-primary" onClick={addUser}> Add User</button>
-                </div>
+                {/*<div className="row">*/}
+                    {/*<button onClick={() => editUser(user.userId)}*/}
+                    {/*        className="btn btn-info">Update*/}
+                    {/*</button>*/}
+                    <button onClick={() => editUser(user.userId)}
+                            className={styles.editUserButton}>Update
+                    </button>
+                {/*</div>*/}
                 <div className="card-body">
                     <div className="row">
                         <label> User ID: {user.userId}</label>
@@ -106,9 +107,7 @@ function ViewUserComponent() {
                     </div>
                 </div>
             </div>
-            <button onClick={() => editUser(user.userId)}
-                    className="btn btn-info">Update
-            </button>
+
             <button className={styles.homebutton} onClick={cancel}>BACK
             </button>
         </div>

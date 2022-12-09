@@ -168,4 +168,7 @@
     padding: 0% 0% 0% 10%;
 }
 
-
+.editUserButton {
+    background-color: #6760fa;
+    color: white;
+}
