@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import UserService from "../../../Services/UserService";
 import {useForm} from "react-hook-form";
 import {useNavigate} from "react-router-dom";
+import styles from "./UserComponent.module.css"
 
 function UserCreateComponent() {
 
@@ -60,99 +61,109 @@ function UserCreateComponent() {
     }
 
     return (
-        <div data-testid="UserCreateComponent">
-            <br></br>
-            <div className="container">
-                <div className="row">
-                    <div className="card col-md-6 offset-md-3 offset-md-3">
+            <div className={styles.viewuser}>
+                <div className={styles.usercreatecomponent}>
+                    <div className={styles.addUserholder}>
                         <h2>ADD User</h2>
                         <div className="card-body">
                             <form
-                                onSubmit={handleSubmit(onSubmit)}
-                            >
-                                <label>Login</label>
-                                <input
-                                    className="form-control"
-                                    {...register("login", {
-                                        required: true,
-                                        minLength: 1,
-                                        pattern: /^[A-Za-z]+$/i
-                                    })}
-                                    onChange={oneChangeHandler}
-                                />
-                                {errors?.login?.type === "required" &&
-                                <p style={{color: "red"}}>Login can not be empty</p>}
-                                {errors?.login?.type === "minLength" && (
-                                    <p style={{color: "red"}}>Login can not be empty</p>
-                                )}
-                                {errors?.login?.type === "pattern" && (
-                                    <p style={{color: "red"}}>Alphabetical characters only</p>
-                                )}
+                                onSubmit={handleSubmit(onSubmit)}>
 
-                                <label>Credentials</label>
-                                <input
-                                    className="form-control"
-                                    {...register("credentials", {
-                                        required: true})}
-                                    onChange={oneChangeHandler}
-                                />
-                                {errors?.credentials?.type === "required" &&
-                                <p style={{color: "red"}}>Credentials can not be empty</p>}
-
-                                <label>Email</label>
-                                <input
-                                    className="form-control"
-                                    {...register("email", {
-                                        required: true
+                                <div className={styles.labelholder}>
+                                    <label>Login</label>
+                                    <input
+                                        className="form-control"
+                                        {...register("login", {
+                                            required: true,
+                                            minLength: 1,
+                                            pattern: /^[A-Za-z]+$/i
                                         })}
-                                    onChange={oneChangeHandler}
-                                />
-                                {errors?.email?.type === "required" &&
-                                <p style={{color: "red"}}>Email can not be empty</p>}
+                                        onChange={oneChangeHandler}
+                                    />
+                                    {errors?.login?.type === "required" &&
+                                    <p style={{color: "red"}}>Login can not be empty</p>}
+                                    {errors?.login?.type === "minLength" && (
+                                        <p style={{color: "red"}}>Login can not be empty</p>
+                                    )}
+                                    {errors?.login?.type === "pattern" && (
+                                        <p style={{color: "red"}}>Alphabetical characters only</p>
+                                    )}
+                                </div>
 
-                                <label>Gender</label>
-                                <input
-                                    className="form-control"
-                                    {...register("gender", {
-                                        required: true
-                                    })}
-                                    onChange={oneChangeHandler}
-                                />
-                                {errors?.gender?.type === "required" &&
-                                <p style={{color: "red"}}>Gender can not be empty</p>}
+                                <div className={styles.labelholder}>
+                                    <label>Credentials</label>
+                                    <input
+                                        className="form-control"
+                                        {...register("credentials", {
+                                            required: true})}
+                                        onChange={oneChangeHandler}
+                                    />
+                                    {errors?.credentials?.type === "required" &&
+                                    <p style={{color: "red"}}>Credentials can not be empty</p>}
+                                </div>
 
-                                <label>Birthday</label>
-                                <input
-                                    className="form-control"
-                                    {...register("birthday", {
-                                    })}
-                                    onChange={oneChangeHandler}
-                                />
+                                <div className={styles.labelholder}>
+                                    <label>Email</label>
+                                    <input
+                                        className="form-control"
+                                        {...register("email", {
+                                            required: true
+                                        })}
+                                        onChange={oneChangeHandler}
+                                    />
+                                    {errors?.email?.type === "required" &&
+                                    <p style={{color: "red"}}>Email can not be empty</p>}
+                                </div>
 
-                                <label>rolesId</label>
-                                <input
-                                    className="form-control"
-                                    {...register("rolesId", {
-                                        required: true
-                                    })}
-                                    onChange={oneChangeHandler}
-                                />
-                                {errors?.rolesId?.type === "required" &&
-                                <p style={{color: "red"}}>rolesId can not be empty</p>}
+                                <div className={styles.labelholder}>
+                                    <label>Gender</label>
+                                    <input
+                                        className="form-control"
+                                        {...register("gender", {
+                                            required: true
+                                        })}
+                                        onChange={oneChangeHandler}
+                                    />
+                                    {errors?.gender?.type === "required" &&
+                                    <p style={{color: "red"}}>Gender can not be empty</p>}
+                                </div>
 
+                                <div className={styles.labelholder}>
+                                    <label>Birthday</label>
+                                    <input
+                                        className="form-control"
+                                        {...register("birthday", {
+                                        })}
+                                        onChange={oneChangeHandler}
+                                    />
+                                </div>
 
-                                <button type="submit" className="btn btn-success">Save</button>
+                                <div className={styles.labelholder}>
+                                    <label>rolesId</label>
+                                    <input
+                                        className="form-control"
+                                        {...register("rolesId", {
+                                            required: true
+                                        })}
+                                        onChange={oneChangeHandler}
+                                    />
+                                    {errors?.rolesId?.type === "required" &&
+                                    <p style={{color: "red"}}>rolesId can not be empty</p>}
+                                </div>
 
-                                <button className="btn btn-danger" onClick={cancel}
-                                        style={{marginLeft: "10px"}}>Cancel
-                                </button>
+                                <div className={styles.labelholder}>
+                                    <button type="submit" className="btn btn-success">Save</button>
 
+                                    <button className="btn btn-danger" onClick={cancel}
+                                            style={{marginLeft: "10px"}}>Cancel
+                                    </button>
+                                </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     );
 
 }

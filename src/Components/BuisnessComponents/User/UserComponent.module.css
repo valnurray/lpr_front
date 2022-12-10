@@ -124,13 +124,29 @@
     cursor: pointer;
 }
 
+.usercreatecomponent {
+    border: solid #f4e603;
+    /*margin-top: 2%;*/
+    /*margin-bottom: 2%;*/
+    text-align: center;
+    background-color: #323C50;
+    margin: 2%;
+    border: solid #f4e603;
+}
 
+.addUserholder {
+    color: darkkhaki;
+    width: 50%;
+    margin: auto;
+}
 .addbutton {
     background-color: #FFF842;
     color: #403E10;
 }
 
-
+.labelholder {
+    margin-top: 2%;
+}
 
 .addbutton {
     background-color: #FFF842;
