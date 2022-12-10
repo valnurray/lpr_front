@@ -74,7 +74,11 @@
     color: #403E10;
 }
 
-
+.productstitleholder {
+    text-align: center;
+    color: #FB667A;
+    margin-top: 5%;
+}
 
 .homebutton {
     background-color: #FFF842;
@@ -169,6 +173,68 @@
 }
 
 .editUserButton {
-    background-color: #6760fa;
+    width: 100%;
+    background-color: #FFF842;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.editUserButton:hover {
+    background: darkkhaki;
+    tansition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+}
+.userinfo {
+    background-color: #323C50;
+    margin: auto;
+    border: solid #f4e603;
+    width: 50%;
+}
+
+.userinfoholder{
+    padding-left: 2%;
+}
+
+.viewuser{
+    width: 100%;
     color: white;
+    /*margin: 2% 10%;*/
+    background-color: #1c2431;
+}
+.productdiv {
+    background-color: #323C50;
+    margin: 2%;
+    border: solid #f4e603;
+}
+
+.allin {
+    /*display: grid;*/
+    /*grid-template-areas:*/
+    /*    " t "*/
+    /*    " i "*/
+    /*    " g "*/
+    /*    " c ";*/
+    /*grid-template-rows: 75px 2fr;*/
+    /*grid-template-columns: 2fr 20fr 2fr;*/
+}
+.producttitle {
+    /*grid-area: t;*/
+    font-size:1.5em;
+    /*text-align: center;*/
+    display: block;
+    color: #FB667A;
+    margin-top: 1%;
+}
+
+.info {
+    /*grid-area: i;*/
+    padding: 2%;
+    color: darkkhaki;
+}
+.producttext {
+    /*grid-area: c;*/
+    padding-left: 2%;
+    text-align: left;
 }

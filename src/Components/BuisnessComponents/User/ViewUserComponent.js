@@ -26,9 +26,7 @@ function ViewUserComponent() {
                 info: ''
             }
         }],
-        orderFields: {
-
-        }
+        orderFields: {}
     });
 
 
@@ -61,50 +59,73 @@ function ViewUserComponent() {
     }
 
     return (
-        <div className="container">
-            <br></br>
-            <div className="card col-md-6 offset-md-3">
-                <h3 className="text-center">View User Details</h3>
-                {/*<div className="row">*/}
-                    {/*<button onClick={() => editUser(user.userId)}*/}
-                    {/*        className="btn btn-info">Update*/}
-                    {/*</button>*/}
-                    <button onClick={() => editUser(user.userId)}
-                            className={styles.editUserButton}>Update
-                    </button>
-                {/*</div>*/}
-                <div className="card-body">
-                    <div className="row">
-                        <label> User ID: {user.userId}</label>
+        <div className={styles.viewuser}>
+            <div>
+                <h3 className="text-center">{user.login}</h3>
+                <div>
+                    <div className={styles.userinfo}>
+                        <button onClick={() => editUser(user.userId)}
+                                className={styles.editUserButton}>Update {user.login}
+                        </button>
+                        <div className={styles.userinfoholder}>
+                            <label> User ID: {user.userId}</label>
+                        </div>
+                        <div className={styles.userinfoholder}>
+                            <label> User Login: {user.login}</label>
+                        </div>
+                        <div className={styles.userinfoholder}>
+                            <label> User Credentials: {user.credentials}</label>
+                        </div>
+                        <div className={styles.userinfoholder}>
+                            <label> User email: {user.email}</label>
+                        </div>
+                        <div className={styles.userinfoholder}>
+                            <label> User gender: {user.gender}</label>
+                        </div>
+                        <div className={styles.userinfoholder}>
+                            <label> User birthday: {user.birthday ? null : 'not specified'}</label>
+                        </div>
+                        <div className={styles.userinfoholder}>
+                            <label> User Role: {user.role.roles}</label>
+                        </div>
                     </div>
-                    <div className="row">
-                        <label> User Login: {user.login}</label>
-                    </div>
-                    <div className="row">
-                        <label> User Credentials: {user.credentials}</label>
-                    </div>
-                    <div className="row">
-                        <label> User email: {user.email}</label>
-                    </div>
-                    <div className="row">
-                        <label> User gender: {user.gender}</label>
-                    </div>
-                    <div className="row">
-                        <label> User birthday: {user.birthday ? null : 'not specified'}</label>
-                    </div>
-                    <div className="row">
-                        <label> User Role: {user.role.roles}</label>
-                    </div>
-                    <div className="row">
-                        <label><h2 className={styles.naming}>Products</h2> </label>
-                        {
-                            user.productMembers.map((item) =>
-                            <div className={styles.productdiv} key={item.productMembersId} onClick={() => viewProduct(item.product.productId)}>
-                                <div className={styles.subrow}>{item.product.title}</div>
+
+                    <h2 className={styles.productstitleholder}>Products {user.login}</h2>
+                    {
+                        user.productMembers.map((item) =>
+                            <div className={styles.productdiv} key={item.productMembersId}
+                                 onClick={() => viewProduct(item.product.productId)}>
+                                <div className={styles.allin}>
+                                    <div className={styles.producttitle}>{item.product.title}</div>
+                                </div>
+                                <div className={styles.info}>{item.product.info}</div>
+                                <p className={styles.producttext}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et
+                                    dolore magna aliqua.
+                                    Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor. Nunc mi
+                                    ipsum faucibus vitae
+                                    aliquet nec ullamcorper sit amet.
+                                    A cras semper auctor neque vitae tempus quam. Mi ipsum faucibus vitae aliquet nec
+                                    ullamcorper sit amet
+                                    risus.
+                                    At augue eget arcu dictum varius duis.
+                                    Commodo quis imperdiet massa tincidunt. Pellentesque elit ullamcorper dignissim cras
+                                    tincidunt lobortis.
+                                    Id neque aliquam vestibulum morbi blandit cursus risus.
+                                    Nisl rhoncus mattis rhoncus urna neque viverra justo nec. Elementum integer enim
+                                    neque volutpat ac
+                                    tincidunt vitae semper quis.
+                                    Est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Eleifend
+                                    quam adipiscing vitae
+                                    proin sagittis nisl rhoncus.
+                                    Justo nec ultrices dui sapien. Mattis aliquam faucibus purus in massa. Ac tortor
+                                    vitae purus faucibus
+                                    ornare.
+                                </p>
                             </div>
-                            )
-                        }
-                    </div>
+                        )
+                    }
                 </div>
             </div>
 

@@ -33,7 +33,7 @@ function UserUpdateComponent(props) {
     };
 
     const cancel = () => {
-        navigate('/users');
+        navigate(`/users/${user.userId}`);
     }
 
 
