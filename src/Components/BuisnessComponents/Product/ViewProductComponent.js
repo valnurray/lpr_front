@@ -97,7 +97,7 @@ function ViewProductComponent() {
                 }
             </div>
 
-            <button className={styles.homebutton} onClick={cancel}>BACK
+            <button className={styles.homebutton} onClick={cancel}>HOME
             </button>
         </div>
     )

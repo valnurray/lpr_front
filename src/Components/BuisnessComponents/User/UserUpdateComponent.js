@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import UserService from "../../../Services/UserService";
+import styles from "./UserComponent.module.css";
 
 
 function UserUpdateComponent(props) {
@@ -43,76 +44,75 @@ function UserUpdateComponent(props) {
         </div>
     }
     return (
-        <div data-testid="UserUpdateComponent">
-            <br></br>
-            <div className="container">
-                <div className="row">
-                    <div className="card col-md-6 offset-md-3 offset-md-3">
-                        <h2>Update Article</h2>
-                        <div className="card-body">
+        <div className={styles.viewuser}>
+            <div className={styles.usercreatecomponent}>
+                <div className={styles.addUserholder}>
+                    <h2>Update {user.login}</h2>
+                    <div className="card-body">
 
-                            <form>
-                                <div className="form-group">
-                                    <label> Login: </label>
-                                    <input placeholder="Login" name="login" className="form-control"
-                                           value={user.login}
-                                           onChange={oneChangeHandler}
-                                    />
-                                </div>
+                        <form>
+                            <div className={styles.labelholder}>
+                                <label> Login: </label>
+                                <input placeholder="Login" name="login" className="form-control"
+                                       value={user.login}
+                                       onChange={oneChangeHandler}
+                                />
+                            </div>
 
-                                <div className="form-group">
-                                    <label> Credentials: </label>
-                                    <input placeholder="Credentials" name="credentials" className="form-control"
-                                           value={user.credentials}
-                                           onChange={oneChangeHandler}
-                                    />
-                                </div>
+                            <div className={styles.labelholder}>
+                                <label> Credentials: </label>
+                                <input placeholder="Credentials" name="credentials" className="form-control"
+                                       value={user.credentials}
+                                       onChange={oneChangeHandler}
+                                />
+                            </div>
 
 
-                                <div className="form-group">
-                                    <label> Email: </label>
-                                    <input placeholder="Email" name="email" className="form-control"
-                                           value={user.email}
-                                           onChange={oneChangeHandler}
-                                    />
-                                </div>
+                            <div className={styles.labelholder}>
+                                <label> Email: </label>
+                                <input placeholder="Email" name="email" className="form-control"
+                                       value={user.email}
+                                       onChange={oneChangeHandler}
+                                />
+                            </div>
 
-                                <div className="form-group">
-                                    <label> Gender: </label>
-                                    <input placeholder="Gender" name="gender" className="form-control"
-                                           value={user.gender}
-                                           onChange={oneChangeHandler}
-                                    />
-                                </div>
+                            <div className={styles.labelholder}>
+                                <label> Gender: </label>
+                                <input placeholder="Gender" name="gender" className="form-control"
+                                       value={user.gender}
+                                       onChange={oneChangeHandler}
+                                />
+                            </div>
 
-                                <div className="form-group">
-                                    <label> Birthday: </label>
-                                    <input placeholder="Birthday" name="birthday" className="form-control"
-                                           value={user.birthday}
-                                           onChange={oneChangeHandler}
-                                    />
-                                </div>
+                            <div className={styles.labelholder}>
+                                <label> Birthday: </label>
+                                <input placeholder="Birthday" name="birthday" className="form-control"
+                                       value={user.birthday}
+                                       onChange={oneChangeHandler}
+                                />
+                            </div>
 
-                                <div className="form-group">
-                                    <label> RolesId: </label>
-                                    <input placeholder="RolesId" name="rolesId" className="form-control"
-                                           value={user.role.rolesId}
-                                           onChange={oneChangeHandler}
-                                    />
-                                </div>
+                            <div className={styles.labelholder}>
+                                <label> RolesId: </label>
+                                <input placeholder="RolesId" name="rolesId" className="form-control"
+                                       value={user.role.rolesId}
+                                       onChange={oneChangeHandler}
+                                />
+                            </div>
 
-
+                            <div className={styles.labelholder}>
                                 <button className="btn btn-success" onClick={UpdateUser}>Save</button>
 
                                 <button className="btn btn-danger" onClick={cancel}
                                         style={{marginLeft: "10px"}}>Cancel
                                 </button>
-                            </form>
-                        </div>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
-
             </div>
+
         </div>
     );
 }
