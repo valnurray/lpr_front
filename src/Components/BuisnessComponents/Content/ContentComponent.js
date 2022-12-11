@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import ContentService from "../../../Services/ContentService";
 import styles from "./ContentComponent.module.css"
-import {Container} from "react-bootstrap"
 
 
 function ContentComponent() {

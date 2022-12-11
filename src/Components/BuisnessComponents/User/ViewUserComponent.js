@@ -26,7 +26,31 @@ function ViewUserComponent() {
                 info: ''
             }
         }],
-        orderFields: {}
+        orderFields: [{
+            orderInt: '',
+            timeOrder: '',
+            totalPrice: '',
+            product: {
+                productId: '',
+                title: '',
+                visibility: '',
+                price: '',
+                info: '',
+                imgpath: '',
+                contents: [{
+                    contentId: '',
+                    title: '',
+                    info: '',
+                    link: ''
+                }
+                ]
+            },
+            bascet: {
+                bascetId: '',
+                countOrders: '',
+                totalOrderPrice: ''
+            }
+        }]
     });
 
 
@@ -56,6 +80,11 @@ function ViewUserComponent() {
     const viewProduct = (id) => {
         console.log(`${id}`)
         navigate(`/products/${id}`);
+    }
+
+    const viewOrder = (id) => {
+        console.log(`${id}`)
+        navigate(`/orderfield/${id}`);
     }
 
     return (
@@ -126,6 +155,35 @@ function ViewUserComponent() {
                             </div>
                         )
                     }
+
+                    <h2 className={styles.productstitleholder}>{user.login} Orders </h2>
+                    {
+                        user.orderFields.map((order) =>
+                            <div className={styles.orderdiv} key={order.orderInt}
+                                 onClick={() => viewOrder(order.orderInt)}>
+                                <div className={styles.orderintdiv}>
+                                    Your order id : {order.orderInt}
+                                </div>
+                                <div className={styles.totalPrice}>
+                                    <span className={styles.totalinfo}> Total : </span>
+                                    <span>{order.totalPrice} $ </span>
+                                </div>
+                                <div className={styles.titleorder}>
+                                    {order.product.title}
+                                </div>
+                                <div className={styles.productprice}>
+                                    <span className={styles.totalinfo}> Product : </span>
+                                    <span> {order.product.price} $ </span>
+                                </div>
+                                <div className={styles.orderinfo}>
+                                    {order.product.info}
+                                </div>
+
+
+                            </div>
+                        )
+                    }
+
                 </div>
             </div>
 

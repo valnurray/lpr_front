@@ -126,8 +126,6 @@
 
 .usercreatecomponent {
     border: solid #f4e603;
-    /*margin-top: 2%;*/
-    /*margin-bottom: 2%;*/
     text-align: center;
     background-color: #323C50;
     margin: 2%;
@@ -253,4 +251,66 @@
     /*grid-area: c;*/
     padding-left: 2%;
     text-align: left;
+}
+
+.orderdiv {
+    display: grid;
+    grid-template-areas:
+        "orderInt totalPrice"
+        "title price"
+        "info info";
+    grid-template-rows: 50px 2fr;
+    grid-template-columns: 12fr 2fr;
+
+    background-color: #323C50;
+    margin: 2%;
+    border: solid #f4e603;
+    cursor: pointer;
+}
+
+
+
+.orderintdiv {
+    grid-area: orderInt;
+    color: #FB667A;
+    font-size: 1.2em;
+    margin: auto;
+
+}
+
+.totalPrice {
+    grid-area: totalPrice;
+    color: #f4e603;
+    text-align: right;
+    font-size: 2em;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    padding-right: 5%;
+}
+.totalinfo {
+    font-size: 0.5em;
+}
+
+.productprice {
+    grid-area: price;
+    color: #f4e603;
+    text-align: right;
+    font-size: 2em;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    padding-right: 5%;
+}
+.titleorder {
+    grid-area: title;
+    color: #FB667A;
+    font-size: 1.2em;
+    margin: auto;
+}
+
+.orderinfo {
+    grid-area: info;
+    padding: 2%;
+    color: darkkhaki;
+    text-align: center;
+    font-size: 2em;
 }

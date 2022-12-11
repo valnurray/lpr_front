@@ -8,7 +8,7 @@ class OrderfieldService{
         return axios.get(ORDERFIELD_API_BASE_URL);
     }
 
-    getOrderfield(orderId){
+    getOrderfieldById(orderId){
         return axios.get(ORDERFIELD_API_BASE_URL + '/' + orderId)
     }
 }

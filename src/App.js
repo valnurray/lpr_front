@@ -17,6 +17,7 @@ import ViewCategoryComponent from "./Components/BuisnessComponents/Category/View
 import Support from "./Components/BasicPages/Support/SupportComponent";
 import UserCreateComponent from "./Components/BuisnessComponents/User/UserCreateComponent";
 import UserUpdateComponent from "./Components/BuisnessComponents/User/UserUpdateComponent";
+import OrderFieldComponent from "./Components/BuisnessComponents/OrderField/OrderFieldComponent";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                         <Route path="/users/:id" element={<ViewUserComponent/>}/>
                         <Route path="/add-user/:id" element={<UserCreateComponent/>}/>
                         <Route path="/update-user/:id" element={<UserUpdateComponent/>}/>
+                        <Route path="/orderfield/:id" element={<OrderFieldComponent/>}/>
                         <Route path="/about" element={<About/>}/>
                         <Route path="/support" element={<Support/>}/>
                         {/*<Route path="/settings" element={<SettingsComponent/>}/>*/}
