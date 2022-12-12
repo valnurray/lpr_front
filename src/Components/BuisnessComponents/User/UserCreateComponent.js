@@ -16,6 +16,11 @@ function UserCreateComponent() {
             rolesId: '2',
             roles: 'User'
         },
+        bascet: {
+            bascetId: '',
+            countOrders: '0',
+            totalOrderPrice: '0',
+        }
     });
 
     const navigate = useNavigate();
@@ -43,6 +48,11 @@ function UserCreateComponent() {
                 rolesId: user.role.rolesId,
                 roles: user.role.roles
             },
+            bascet: {
+                bascetId: user.userId,
+                countOrders: '0',
+                totalOrderPrice: '0',
+            }
         };
         debugger
         UserService.createUser(data)

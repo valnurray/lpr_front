@@ -1,0 +1,92 @@
+.bascetWraper {
+    color: white;
+    background-color: #1c2431;
+}
+.bascettitle {
+    color: #FB667A;
+    font-size: 2em;
+    text-align: center;
+}
+.bascetinformation {
+    display: grid;
+    grid-template-areas:
+        "bascetId totalOrderPrice";
+
+    grid-template-rows: 50px 2fr;
+    grid-template-columns: 5fr 15fr;
+}
+
+.bascetId {
+    grid-area: bascetId;
+
+    color: white;
+    text-align: left;
+    font-size: 1.2em;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    padding-left: 5%;
+
+}
+.totalOrderPrice {
+    grid-area: totalOrderPrice;
+    color: #f4e603;
+    text-align: right;
+    font-size: 2em;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    padding-right: 5%;
+}
+
+.orderFields {
+    display: grid;
+    grid-template-areas:
+        "orderInt totalPrice"
+        "title title"
+        "info info"
+        "textinfo textinfo";
+    grid-template-rows: 50px 2fr;
+    grid-template-columns: 2fr 12fr;
+
+    background-color: #323C50;
+    margin: 2%;
+    border: solid #f4e603;
+    cursor: pointer;
+}
+
+.totalPrice {
+    grid-area: totalPrice;
+    color: #f4e603;
+    text-align: right;
+    font-size: 1em;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    padding-right: 5%;
+}
+.orderInt {
+    grid-area: orderInt;
+    color: darkkhaki;
+    text-align: left;
+    font-size: 1em;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    padding-left: 5%;
+}
+
+.title {
+    grid-area: title;
+    color: #FB667A;
+    font-size: 1.5em;
+    text-align: center;
+}
+.info {
+    grid-area: info;
+    color: darkkhaki;
+    text-align: center;
+    margin: 1%;
+}
+.textinfo {
+    grid-area: textinfo;
+    text-align: left;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}

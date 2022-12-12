@@ -3,6 +3,8 @@ import UserService from "../../../Services/UserService";
 import {useNavigate} from 'react-router-dom';
 import {useParams} from "react-router-dom";
 import styles from './UserComponent.module.css'
+import bascetIcon from "../../../common/icons/bascet.png"
+import updateIcon from "../../../common/icons/update.png"
 import RoleService from "../../../Services/RoleService";
 
 function ViewUserComponent() {
@@ -26,31 +28,55 @@ function ViewUserComponent() {
                 info: ''
             }
         }],
-        orderFields: [{
-            orderInt: '',
-            timeOrder: '',
-            totalPrice: '',
-            product: {
-                productId: '',
-                title: '',
-                visibility: '',
-                price: '',
-                info: '',
-                imgpath: '',
-                contents: [{
-                    contentId: '',
-                    title: '',
-                    info: '',
-                    link: ''
+        // orderFields: [{
+        //     orderInt: '',
+        //     timeOrder: '',
+        //     totalPrice: '',
+        //     product: {
+        //         productId: '',
+        //         title: '',
+        //         visibility: '',
+        //         price: '',
+        //         info: '',
+        //         imgpath: '',
+        //         contents: [{
+        //             contentId: '',
+        //             title: '',
+        //             info: '',
+        //             link: ''
+        //         }]
+        //     },
+        //     bascet: {
+        //         bascetId: '',
+        //         countOrders: '',
+        //         totalOrderPrice: ''
+        //     }
+        // }]
+        bascet: {
+            bascetId: '',
+            countOrders: '',
+            totalOrderPrice: '',
+            orderFields: [{
+                    orderInt: '',
+                    timeOrder: '',
+                    totalPrice: '',
+                    product: {
+                        productId: '',
+                        title: '',
+                        visibility: '',
+                        price: '',
+                        info: '',
+                        imgpath: '',
+                        contents: [{
+                                contentId: '',
+                                title: '',
+                                info: '',
+                                link: ''
+                            }]
+                    }
                 }
-                ]
-            },
-            bascet: {
-                bascetId: '',
-                countOrders: '',
-                totalOrderPrice: ''
-            }
-        }]
+            ]
+        }
     });
 
 
@@ -82,9 +108,9 @@ function ViewUserComponent() {
         navigate(`/products/${id}`);
     }
 
-    const viewOrder = (id) => {
+    const pushToBascet = (id) => {
         console.log(`${id}`)
-        navigate(`/orderfield/${id}`);
+        navigate(`/bascet/${id}`);
     }
 
     return (
@@ -94,7 +120,14 @@ function ViewUserComponent() {
                 <div>
                     <div className={styles.userinfo}>
                         <button onClick={() => editUser(user.userId)}
-                                className={styles.editUserButton}>Update {user.login}
+                                className={styles.editUserButton}>
+                            <img className={styles.buttonIcon} src={updateIcon} alt="update icon"/>
+                            <span className={styles.iconsbutton}>Edit {user.login}</span>
+                        </button>
+                        <button onClick={() => pushToBascet(user.bascet.bascetId)}
+                                className={styles.editUserButton}>
+                            <img className={styles.buttonIcon} src={bascetIcon} alt="bascet icon"/>
+                            <span className={styles.iconsbutton}>Orders {user.login}</span>
                         </button>
                         <div className={styles.userinfoholder}>
                             <label> User ID: {user.userId}</label>
@@ -156,33 +189,33 @@ function ViewUserComponent() {
                         )
                     }
 
-                    <h2 className={styles.productstitleholder}>{user.login} Orders </h2>
-                    {
-                        user.orderFields.map((order) =>
-                            <div className={styles.orderdiv} key={order.orderInt}
-                                 onClick={() => viewOrder(order.orderInt)}>
-                                <div className={styles.orderintdiv}>
-                                    Your order id : {order.orderInt}
-                                </div>
-                                <div className={styles.totalPrice}>
-                                    <span className={styles.totalinfo}> Total : </span>
-                                    <span>{order.totalPrice} $ </span>
-                                </div>
-                                <div className={styles.titleorder}>
-                                    {order.product.title}
-                                </div>
-                                <div className={styles.productprice}>
-                                    <span className={styles.totalinfo}> Product : </span>
-                                    <span> {order.product.price} $ </span>
-                                </div>
-                                <div className={styles.orderinfo}>
-                                    {order.product.info}
-                                </div>
+                    {/*<h2 className={styles.productstitleholder}>{user.login} Orders </h2>*/}
+                    {/*{*/}
+                    {/*    user.orderFields.map((order) =>*/}
+                    {/*        <div className={styles.orderdiv} key={order.orderInt}*/}
+                    {/*             onClick={() => viewOrder(order.orderInt)}>*/}
+                    {/*            <div className={styles.orderintdiv}>*/}
+                    {/*                Your order id : {order.orderInt}*/}
+                    {/*            </div>*/}
+                    {/*            <div className={styles.totalPrice}>*/}
+                    {/*                <span className={styles.totalinfo}> Total : </span>*/}
+                    {/*                <span>{order.totalPrice} $ </span>*/}
+                    {/*            </div>*/}
+                    {/*            <div className={styles.titleorder}>*/}
+                    {/*                {order.product.title}*/}
+                    {/*            </div>*/}
+                    {/*            <div className={styles.productprice}>*/}
+                    {/*                <span className={styles.totalinfo}> Product : </span>*/}
+                    {/*                <span> {order.product.price} $ </span>*/}
+                    {/*            </div>*/}
+                    {/*            <div className={styles.orderinfo}>*/}
+                    {/*                {order.product.info}*/}
+                    {/*            </div>*/}
 
 
-                            </div>
-                        )
-                    }
+                    {/*        </div>*/}
+                    {/*    )*/}
+                    {/*}*/}
 
                 </div>
             </div>
